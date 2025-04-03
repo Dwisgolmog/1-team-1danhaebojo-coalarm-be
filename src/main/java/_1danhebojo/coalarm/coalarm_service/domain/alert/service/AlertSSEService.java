@@ -144,6 +144,8 @@ public class AlertSSEService {
 
     // 특정 시간마다 가격 비교해서 보낼 알람 체크 (티커 체크 + 히스토리 체크 + 조건 도달 체크)
     public void checkUserAlert(){
+        log.info("userEmitters 상태 - 크기: {}, 키 목록: {}", userEmitters.size(), userEmitters.keySet());
+        log.info("activeAlertList 상태 - 크기: {}", activeAlertList.size());
         // 티커 테이블에서 코인의 최신 값을 한번에 불러와서 조회 후 비교
         List<String> allSymbols = activeAlertList.values().stream()
                 .flatMap(List::stream) // List<Alert> -> Alert
@@ -227,7 +229,12 @@ public class AlertSSEService {
 
     // 로그인한 사용자가 실행 SSE 전송 요청
     public SseEmitter subscribe(Long userId) {
-        if(userId == null) { return null;}
+        if(userId == null) {
+            log.warn("SSE 연결 실패 - 사용자 ID가 null입니다");
+            return null;
+        }else{
+            log.info("SSE 연결 시도 - 사용자: {}", userId);
+        }
         // 이미 존재하는 emitter가 있으면 재사용
         List<SseEmitter> existingEmitters = userEmitters.get(userId);
         if (existingEmitters != null) {
