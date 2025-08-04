@@ -8,4 +8,5 @@ import java.util.List;
 public interface CoinRepository {
     List<CoinEntity> findAlertCoinsByUserId(Long userId);
     List<CoinWithPriceDTO> searchCoinsWithLatestPrice(String keyword, String quoteSymbol);
+    List<CoinEntity> findAllWithoutUSDT();
 }

@@ -67,6 +67,14 @@ public class CoinRepositoryImpl implements CoinRepository {
                 .fetch();
     }
 
+    @Override
+    public List<CoinEntity> findAllWithoutUSDT() {
+        return query.selectFrom(coinEntity)
+                .where(coinEntity.symbol.ne("USDT"))
+                .orderBy(coinEntity.id.asc())
+                .fetch();
+    }
+
     private BooleanExpression keywordContains(String keyword) {
         if (!StringUtils.hasText(keyword)) return null;
         return coinEntity.name.containsIgnoreCase(keyword)
