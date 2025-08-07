@@ -1,5 +1,80 @@
 # CHANGELOG
 
+## [1.34.2](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.34.1...v1.34.2) (2025-04-29)
+
+### 🐛 BUG FIXES
+
+* 배포 스크립트 self-hosted에서 ubuntu-letest 변경 ([5f338f9](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/5f338f9c9523c874c82f61cd836de7df9d2e083e))
+
+## [1.34.1](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.34.0...v1.34.1) (2025-04-24)
+
+### 🐛 BUG FIXES
+
+* 코인 예측 fastapi 서버 엔드포인트 수정 ([b7e5a98](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/b7e5a985e7c79a6249fa30aca4a33b9e3c8f09ab))
+
+## [1.34.0](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.33.4...v1.34.0) (2025-04-23)
+
+### 🚀 NEW FEATURES
+
+* 코인 예측 api 구현 ([0e56df9](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/0e56df9d45bc0c670c76cced5d7b57555c84b0ed))
+
+## [1.33.4](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.33.3...v1.33.4) (2025-04-14)
+
+### 🐛 BUG FIXES
+
+* JWT 블랙리스트 관련 스케줄러 주석 ([5227714](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/522771411ba590ec199661f29e6334116a7a9efe))
+* 예외처리 수정 ([c7ea818](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/c7ea8188b2d2879e98c753c2d5f18a327412d1cf))
+
+## [1.33.3](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.33.2...v1.33.3) (2025-04-10)
+
+### 🐛 BUG FIXES
+
+* UpbitSseController SSE에 MediaType.TEXT_EVENT_STREAM_VALUE 지정 ([6c7a58f](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/6c7a58fe93c681ce8c64460563784b995a86899d))
+
+## [1.33.2](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.33.1...v1.33.2) (2025-04-10)
+
+### 🐛 BUG FIXES
+
+* 티커 데이터 조회 시 상관쿼리 최적화 ([c89e7e8](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/c89e7e8170a4d20e9be40d4822df369d15c8b632))
+
+## [1.33.1](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.33.0...v1.33.1) (2025-04-10)
+
+### ♻️ REFACTORING
+
+* 사용하지 않는 코드 제거 ([4619893](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/46198939f6717f85d81dfccce7022c02c793963d))
+
+## [1.33.0](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.32.6...v1.33.0) (2025-04-09)
+
+### 🚀 NEW FEATURES
+
+* CandleEntity에 빌더 추가 ([ad774b6](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/ad774b651e6bb2c414b388dc0ad3267414951671))
+* MACD 캔들 데이터 전환 ([8b48bb6](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/8b48bb63a9c0be88d55cabb5a006f824e8963218))
+* RSI 계산을 위한 CandleRepository 구현 및 서비스 적용 ([aac9385](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/aac9385ded3ccef5d5c2b27c5ff6ce025642eac0))
+* 캔들 기반 지표 계산을 위한 엔티티 및 레포지토리 추가 ([5f3b72a](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/5f3b72a5127b7c5157c2d77ed74d04180606cc3c)), closes [#7](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/issues/7)
+
+### ♻️ REFACTORING
+
+* 스케쥴러 분리 ([3795b5d](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/3795b5d8201dec273eca0807772f7cf1c9ee0bfc))
+
+## [1.32.6](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.32.5...v1.32.6) (2025-04-09)
+
+### ♻️ REFACTORING
+
+* ALREADY_EXISTS_ALERT 내용 수정 ([3df7e4f](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/3df7e4f4097a6ebbbf0c3adf9fada3bc251c8ad5))
+* 알람 갯수 제한 추가 ([e1938ed](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/e1938edc335b09d213472e953f001e1c51449559))
+
+## [1.32.5](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.32.4...v1.32.5) (2025-04-07)
+
+### ♻️ REFACTORING
+
+* 불필요한 쿼리 삭제 ([f5c828d](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/f5c828dc7f11687e36a95c3d057b15f61525f637))
+
+## [1.32.4](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.32.3...v1.32.4) (2025-04-07)
+
+### ♻️ REFACTORING
+
+* 김치프리미엄 정렬순 변경 ([e3e9adf](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/commit/e3e9adfa03022326b2a62925c73ef7cfe2a22d23))
+
 ## [1.32.3](https://github.com/100-hours-a-week/1-team-1danhaebojo-coalarm-be/compare/v1.32.2...v1.32.3) (2025-04-07)
 
 ### ♻️ REFACTORING
